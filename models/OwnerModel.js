@@ -1,10 +1,8 @@
 
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/scatch");
-
-const OwnerSchema = mongoose.Schema({
-  fillname: {
+const ownerSchema = mongoose.Schema({
+  fullname: {
     type: String,
     required: true,
     minlength: 3,
@@ -18,8 +16,8 @@ const OwnerSchema = mongoose.Schema({
   },
   contact: Number,
   profile: String,
-  gstin: String
+  gstin: String,
 });
 
-module.exports = mongoose.model("owner", OwnerSchema);
+module.exports = mongoose.model("owner", ownerSchema);
 
