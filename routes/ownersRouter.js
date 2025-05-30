@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 router.post("/create", async (req, res) => {
   let owner = await ownerModel.find();
   if (owner.length > 0) {
-    res.status(400).send("Owner already exists");
+    res.status(400).send("The Owner already exists");
   } else {
     let { fullname, email, password } = req.body;
     let createdOwner = await ownerModel.create({
