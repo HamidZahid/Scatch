@@ -3,7 +3,7 @@ const router = express.Router();
 const ownerModel = require("../models/OwnerModel");
 
 router.get("/", (req, res) => {
-  res.send("Welcome to the owners page");
+  res.send("The Welcome to the owners page");
 });
 router.post("/create", async (req, res) => {
   let owner = await ownerModel.find();
