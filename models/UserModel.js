@@ -19,6 +19,7 @@ const userSchema = mongoose.Schema({
   },
   contact: Number,
   profile: String,
+  trim: true,
 });
 
 module.exports = mongoose.model("user", sserSchema);
