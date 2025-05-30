@@ -11,6 +11,7 @@ const productSchema = mongoose.Schema({
     bgcolor: String,
     panelcolor: String,
     textcolor: String,
+    trim: true,
 });
 
 module.exports = mongoose.model("product", pageYOffsetroductSchema);
